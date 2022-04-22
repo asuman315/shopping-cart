@@ -1,7 +1,8 @@
 import React from 'react'
 import Items from '../Components/Home/Items'
-import Navigation from '../Components/Home/Navigation'
+import Navigation from '../Components/Navigation'
 import Title from '../Components/Home/Title'
+import Footer from '../Components/Footer'
 require('../Styles/Home.css')
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
        <Navigation />
        <Title />
        <Items />
+       <Footer />
      </section>
   )
 }

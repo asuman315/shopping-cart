@@ -1,5 +1,6 @@
 import React from 'react'
 import { HiOutlineShoppingCart } from 'react-icons/hi';
+require('../Styles/Navigation.css')
 
 const Navigation = () => {
   return (

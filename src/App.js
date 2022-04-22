@@ -6,7 +6,9 @@ import {
   Route,
 } from 'react-router-dom'
 import Home from './Screens/Home'
+import Details from './Screens/Details'
 require('./App.css')
+
 
 export const AppContext = createContext();
 
@@ -15,7 +17,7 @@ const App = () => {
 
       const getProductsFromApi = async () =>  {
         try {
-          const response = await axios.get('https://asmn-shopping-cart.herokuapp.com/api/shopping-carts?fields=name,price&populate=image');
+          const response = await axios.get('https://asmn-shopping-cart.herokuapp.com/api/shopping-carts?fields=name,price,discountPercentage&populate=image');
 
           const productsList = response.data.data;
 
@@ -34,7 +36,14 @@ const App = () => {
   return (
     <AppContext.Provider value={{ data, setData }}>
       <Routes>
-        <Route path='/' element={<Home data={data} />} />
+        <Route 
+          path='/shopping-cart' 
+          element={<Home data={data} />} 
+        />
+        <Route 
+          path='/details' 
+          element={<Details data={data} />} 
+        />
       </Routes>
     </AppContext.Provider>
   )
