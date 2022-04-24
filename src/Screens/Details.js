@@ -1,19 +1,21 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
-import Images from '../Components/Details/Images';
+import Carousel from '../Components/Details/Carousel';
 import Navigation from '../Components/Navigation'
+
+// require('../Styles/Details.css')
 
 const Details = () => {
   
  const id = useLocation().state.productId;
   
-  console.log(id);
+  //console.log(id);
 
   return (
     <section>
       <Navigation />
       <main>
-        <Images id = {id} />
+        <Carousel id = {id} />
       </main>
     </section>
   )

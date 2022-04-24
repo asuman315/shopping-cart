@@ -29,6 +29,11 @@ Solution: I used the `useLocation` hook to move props (id)from one component (th
   ```
 
 ## Lessons.
-`event.currentTarget` makes the `click` event only fire in the parent `div`. With `event.target`, the click event fires in any clicked child element like so...
+###1 `event.currentTarget` makes the `click` event only fire in the parent `div`. With `event.target`, the click event fires in any clicked child element like so...
+
+###2 Styling using TailWind CSS.
+At first, I found it challenging to learn the styling behind tailwind. I felt like giving up but I gave it a chance to see what good thing might come out. And I was right. Styling with tailwind CSS is faster and more efficient that plain CSS. 
+
+It's amazing how good one can become if they have the attitude to get out of their comfort zone and learn new ways of doing things.
 
 
