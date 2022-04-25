@@ -5,7 +5,7 @@ import Details from '../../Screens/Details';
 
 const Items = () => {
 
- const { data } = useContext(AppContext);
+ const { items } = useContext(AppContext);
 
   const navigate = useNavigate();
 
@@ -21,7 +21,7 @@ const Items = () => {
    <>
      <hr className='products-hr' />
      <main className="products-container"> 
-      { data.map(product => {
+      { items.map(product => {
           const item = product.attributes
          // console.log(item);
         const { name, image, price, discountPercentage } = item;

@@ -13,16 +13,17 @@ require('./App.css')
 export const AppContext = createContext();
 
 const App = () => {
-  const [data, setData] = useState([])
+  const [items, setItems] = useState([])
 
       const getProductsFromApi = async () =>  {
         try {
-          const response = await axios.get('https://asmn-shopping-cart.herokuapp.com/api/shopping-carts?fields=name,price,discountPercentage&populate=image');
+          const response = await axios.get('https://asmn-shopping-cart.herokuapp.com/api/shopping-carts?populate=*');
 
           const productsList = response.data.data;
 
-          //console.log(products);
-          setData(productsList);
+          setItems(productsList);
+
+          //console.log(productsList);
           
         } catch (error) {
           console.log(error);
@@ -33,19 +34,27 @@ const App = () => {
         getProductsFromApi();
        }, [])
 
+      // items.map(item => {
+      //   if(item.id == 3) {
+      //     console.log(item);
+      //   }
+      // })
+
   return (
-    <AppContext.Provider value={{ data, setData }}>
+    <AppContext.Provider value={{ items, setItems }}>
       <Routes>
         <Route 
           path='/shopping-cart' 
-          element={<Home data={data} />} 
+          element={<Home items={items} />} 
         />
         <Route 
           path='/details' 
-          element={<Details data={data} />} 
+          element={<Details items={items} />} 
         />
       </Routes>
     </AppContext.Provider>
   )
 }
 export default App
+
+// fields = name, price, discountPercentage & populate=image
