@@ -40,7 +40,7 @@ const ItemNumber = () => {
 
 const CtaBtn = () => {
   return (
-    <button className='text-center w-full bg-primary-dark mt-9 mb-12 py-2 text-[1.5rem] text-white flex flex-row items-center justify-center'> <HiOutlineShoppingCart className='absolute left-[5rem]' />Add to cart</button>
+    <button className='text-center w-full bg-primary-dark mt-9 mb-12 py-4 text-[1.5rem] text-white flex flex-row items-center justify-center border-0 outline-none'> <HiOutlineShoppingCart className='absolute left-[5rem]' />Add to cart</button>
   )
 }
 

@@ -50,11 +50,11 @@ const ProductInfo = ({ id }) => {
         <h2 className=' my-0 text-[1.5rem] font-extrabold tracking-wide' >{ name }</h2>
         <p className='my-4 text-[1rem] font-light'>{ desc }</p>
       <article className='flex justify-between'>
-        <div className='flex w-[10rem] border-solid border-1 border-[red] justify-between'>
-          <p className='font-black'>{ price }</p>
-          <p className='bg-[#9ca3af] text-primary-dark px-1.5 w-10 rounded-sm font-bold'>{ discountPercentage }</p>
+        <div className='flex w-[12rem] border-solid border-1 border-[red] justify-between'>
+          <p className='font-black text-[1.2rem]'>{ price }</p>
+          <p className='bg-[#9ca3af] text-primary-dark px-1.5 w-12 rounded-sm font-bold '>-{ discountPercentage }</p>
         </div>
-        <p className='line-through'>{ discountPrice }</p>
+        <p className='line-through text-[1.1rem]'>{ discountPrice }</p>
       </article>
      </section>
   )

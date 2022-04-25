@@ -127,10 +127,10 @@ const CarouselControls = ({ imageUrls, currentSlide, setCurrentSlide, setCarouse
 
   return (
     <section className='absolute w-full flex justify-between px-0'>
-      <button onClick={ prev } className="text-[4rem] text-[#7f1d1d] ">
+      <button onClick={prev} className="text-[4rem] text-[#7f1d1d] border-0 outline-none ">
           <FiChevronLeft />        
       </button>
-      <button onClick={ next } className="text-[4rem] text-[#7f1d1d]">
+      <button onClick={next} className="text-[4rem] text-[#7f1d1d] border-0 outline-none">
           <FiChevronRight /> 
         </button>  
     </section>
